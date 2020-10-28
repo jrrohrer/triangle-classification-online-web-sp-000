@@ -17,11 +17,11 @@ class Triangle
         raise TriangleError
 
     else
-      if @s1 == @s2 && @s2 == @s3
+      if @s1 == @s2 && @s2 == @s3 # Returns equilateral for triangles w/ 3 equal sides
         :equilateral
-      elsif @s1 == @s2 || @s2 == @s3 || @s1 == @s3
+      elsif @s1 == @s2 || @s2 == @s3 || @s1 == @s3 # Returns isosceles for triangles w/ 2 equal sides
         :isosceles
-      elsif @s1 != @s2 && @s2 != @s3 && @s1 != @s3
+      elsif @s1 != @s2 && @s2 != @s3 && @s1 != @s3 # Returns scalene for triangles w/ 3 sides of different lengths
         :scalene
       end
     end
