@@ -8,20 +8,20 @@ class Triangle
   end
 
   def kind
-    if @side_1 <= 0 || @side_2 <= 0 || @side_3 <= 0
+    if @s1 <= 0 || @s2 <= 0 || @s3 <= 0
 
         raise TriangleError
 
-    elsif @side_1 + @side_2 <= @side_3 || @side_1 + @side_3 <= @side_2 || @side_2 + @side_3 <= @side_1
+    elsif @s1 + @s2 <= @s3 || @s1 + @s3 <= @s2 || @s2 + @s3 <= @s1
 
         raise TriangleError
 
     else
-      if @side_1 == @side_2 && @side_2 == @side_3
+      if @s1 == @s2 && @s2 == @s3
         :equilateral
-      elsif @side_1 == @side_2 || @side_2 == @side_3 || @side_1 == @side_3
+      elsif @s1 == @s2 || @s2 == @s3 || @s1 == @s3
         :isosceles
-      elsif @side_1 != @side_2 && @side_2 != @side_3 && @side_1 != @side_3
+      elsif @s1 != @s2 && @s2 != @s3 && @s1 != @s3
         :scalene
       end
     end
